@@ -20,7 +20,9 @@ puts "Mens Apparel stores:"
 end
 
 puts ""
-@womens_store = Store.where(womens_apparel: true).where("annual_revenue < 1000000")
+@womens_store = Store.where("womens_apparel= true AND annual_revenue < 1000000")
+# alternate way of doing it
+# @womens_store = Store.where(womens_apparel: true).where("annual_revenue < 1000000")
 
 puts "Womens Apparel stores that has an annual revenue < 1,000,000"
 @womens_store.each do |store|
