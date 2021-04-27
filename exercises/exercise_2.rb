@@ -12,7 +12,5 @@ p @store1
 @store2 = Store.find_by(id: 2)
 p @store2
 
-
 @store1.update(name: "Calgastore")
-
 p @store1
